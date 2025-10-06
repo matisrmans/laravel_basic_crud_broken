@@ -6,6 +6,7 @@ index.blade.php file content
     @foreach($comments as $comment)
     <li>
         {{$comment->content}}
+        <button type=
     </li>
     @endforeach
 </ul>

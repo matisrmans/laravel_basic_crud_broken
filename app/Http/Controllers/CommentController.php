@@ -24,5 +24,10 @@ class CommentController extends Controller
         return redirect('/comments');
     }
 
+    public function delete(Request $request){
+        
+        return redirect('/comments');
+    }
+
     // delete functionality has to be implemented
 }
