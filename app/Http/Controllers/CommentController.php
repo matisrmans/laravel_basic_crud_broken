@@ -24,8 +24,8 @@ class CommentController extends Controller
         return redirect('/comments');
     }
 
-    public function delete(Request $request){
-        
+    public function delete($id){
+        $comments = Comment::destroy($id);
         return redirect('/comments');
     }
 

@@ -3,10 +3,11 @@ index.blade.php file content
 {{-- display a list of comments in laravel blade view --}}
 
 <ul>
+    @csrf
     @foreach($comments as $comment)
     <li>
         {{$comment->content}}
-        <button type=
+        <a href='comments/delete'>Delete</a>
     </li>
     @endforeach
 </ul>
