@@ -9,11 +9,11 @@ class CommentController extends Controller
 {
     public function index() {
         $comments = Comment::all();
-        return view('comments.index');
+        return view('comments.index', ['comments' => $comments]);
     }
 
     public function create() {
-        return "this has to return create form view";
+        return view('comments.create');
     }
 
     public function store(Request $request) {
@@ -21,7 +21,7 @@ class CommentController extends Controller
             'content' => $request["content"]
         ]);
 
-        return redirect('/comments/list');
+        return redirect('/comments');
     }
 
     // delete functionality has to be implemented
